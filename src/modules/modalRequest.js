@@ -11,6 +11,12 @@ const modalRequest = () => {
     overlay.style.display = "flex";
   };
 
+  const closeModal = () => {
+    requestModal.style.display = "none";
+    document.body.style.oveflow = "";
+    overlay.style.display = "none";
+  };
+
   requestBtn.addEventListener("click", () => {
     openModal();
   });
@@ -20,16 +26,12 @@ const modalRequest = () => {
   });
 
   closeBtn.addEventListener("click", () => {
-    requestModal.style.display = "none";
-    document.body.style.oveflow = "";
-    overlay.style.display = "none";
+    closeModal();
   });
 
   overlay.addEventListener("click", (e) => {
     if (!e.target.closest(".header-modal")) {
-      requestModal.style.display = "none";
-      document.body.style.oveflow = "";
-      overlay.style.display = "none";
+      closeModal();
     }
   });
 };

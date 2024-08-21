@@ -5,6 +5,7 @@ import timer from "./modules/timer";
 import sendForm from "./modules/sendForm";
 import validateForm from "./modules/validateForm";
 import certificates from "./modules/certificates";
+import scroll from "./modules/scroll";
 
 modalRequest();
 benefitsSlider();
@@ -14,3 +15,4 @@ timer("10 september 2024");
 sendForm();
 validateForm();
 certificates();
+scroll();

@@ -6,6 +6,7 @@ import sendForm from "./modules/sendForm";
 import validateForm from "./modules/validateForm";
 import certificates from "./modules/certificates";
 import scroll from "./modules/scroll";
+import calculator from "./modules/calculator";
 
 modalRequest();
 benefitsSlider();
@@ -16,3 +17,4 @@ sendForm();
 validateForm();
 certificates();
 scroll();
+calculator();

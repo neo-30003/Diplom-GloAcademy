@@ -9,13 +9,13 @@ const calculator = () => {
   const material = document.getElementById("calc-type-material");
 
   const countCalc = () => {
-    const calcTypeValue = +type.options[type.selectedIndex].value;
-    const calcInputValue = +input.value;
-    const calcMaterialValue = +material.options[material.selectedIndex].value;
+    const calcTypeValue = type.options[type.selectedIndex].value;
+    const calcInputValue = input.value;
+    const calcMaterialValue = material.options[material.selectedIndex].value;
     let totalValue;
 
     totalValue = +calcTypeValue * +calcInputValue * +calcMaterialValue;
-    total.textContent = totalValue;
+    total.value = totalValue;
 
     if (totalValue !== 0) {
       animate({
@@ -24,9 +24,8 @@ const calculator = () => {
           return timeFraction;
         },
         draw(progress) {
-          total.textContent =
-            +total.textContent +
-            Math.round(progress * (totalValue - total.textContent));
+          total.value =
+            +total.value + Math.round(progress * (totalValue - total.value));
         },
       });
     }
@@ -46,7 +45,7 @@ const calculator = () => {
         !material.selectedIndex ||
         input.value === ""
       ) {
-        total.textContent = 0;
+        total.value = 0;
       }
     });
   }
